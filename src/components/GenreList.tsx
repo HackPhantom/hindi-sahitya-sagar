@@ -18,7 +18,10 @@ const GenreList: React.FC = () => {
     <section className="py-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-2 hindi-heading">श्रेणियाँ</h2>
+          <h2 className="text-3xl font-bold mb-2 hindi-heading relative inline-block">
+            श्रेणियाँ
+            <span className="absolute -bottom-1 left-0 w-full h-1 bg-sahitya-500 rounded transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100 origin-left"></span>
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             अपनी रुचि के अनुसार पुस्तकें खोजें और हिंदी साहित्य के विभिन्न रूपों का आनंद लें।
           </p>
@@ -29,12 +32,12 @@ const GenreList: React.FC = () => {
             <Link 
               key={genre.id} 
               to={`/genre/${genre.id}`}
-              className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow group"
+              className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group"
             >
-              <div className="w-12 h-12 rounded-full bg-sahitya-100 flex items-center justify-center mx-auto mb-4 text-sahitya-600 group-hover:bg-sahitya-500 group-hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-full bg-sahitya-100 flex items-center justify-center mx-auto mb-4 text-sahitya-600 group-hover:bg-sahitya-500 group-hover:text-white transition-colors duration-300">
                 {genreIcons[genre.id]}
               </div>
-              <h3 className="text-lg font-semibold mb-2 hindi-heading">{genre.name}</h3>
+              <h3 className="text-lg font-semibold mb-2 hindi-heading group-hover:text-sahitya-600 transition-colors duration-300">{genre.name}</h3>
               <p className="text-sm text-gray-600">{genre.description}</p>
             </Link>
           ))}
