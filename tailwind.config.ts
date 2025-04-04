@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,31 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Hindi Sahitya specific colors
+				"sahitya": {
+					50: "#FFF5F5",
+					100: "#FFE0D5",
+					200: "#FDC2A5",
+					300: "#F99E78",
+					400: "#F2784B", 
+					500: "#E85A2B", // primary
+					600: "#D13C1A",
+					700: "#B32914",
+					800: "#8A1C10",
+					900: "#62140B",
+				},
+				"earth": {
+					50: "#F9F7F2",
+					100: "#F2EFE4",
+					200: "#E4DBD0",
+					300: "#D3C2B3",
+					400: "#B8A08C",
+					500: "#A58D75",
+					600: "#917966",
+					700: "#796353",
+					800: "#604F42",
+					900: "#483C34",
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -69,26 +85,31 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+				"accordion-down": {
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' },
 				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+				"accordion-up": {
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' },
+				},
+				"fade-in": {
+					"0%": { opacity: "0", transform: "translateY(10px)" },
+					"100%": { opacity: "1", transform: "translateY(0)" }
+				},
+				"book-hover": {
+					"0%": { transform: "translateY(0)" },
+					"100%": { transform: "translateY(-8px)" }
 				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
+				"fade-in": "fade-in 0.3s ease-out",
+				"book-hover": "book-hover 0.3s ease-out"
+			},
+			fontFamily: {
+				hindi: ["'Noto Sans Devanagari'", "sans-serif"],
 			}
 		}
 	},
