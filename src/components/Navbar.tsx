@@ -11,10 +11,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import ShlokaNavbar from './ShlokaNavbar';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { user, signOut } = useAuth();
+  const { t } = useLanguage();
   const navigate = useNavigate();
   
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -34,15 +37,25 @@ const Navbar: React.FC = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-sahitya-500 font-medium">मुख्य पृष्ठ</Link>
-            <Link to="/books" className="text-gray-700 hover:text-sahitya-500 font-medium">पुस्तकें</Link>
-            <Link to="/authors" className="text-gray-700 hover:text-sahitya-500 font-medium">लेखक</Link>
-            <Link to="/genres" className="text-gray-700 hover:text-sahitya-500 font-medium">श्रेणियाँ</Link>
+          <div className="hidden md:flex items-center space-x-4">
+            <ShlokaNavbar />
+            
+            <Link to="/" className="text-gray-700 hover:text-sahitya-500 font-medium">
+              {t("मुख्य पृष्ठ", "Home")}
+            </Link>
+            <Link to="/books" className="text-gray-700 hover:text-sahitya-500 font-medium">
+              {t("पुस्तकें", "Books")}
+            </Link>
+            <Link to="/authors" className="text-gray-700 hover:text-sahitya-500 font-medium">
+              {t("लेखक", "Authors")}
+            </Link>
+            <Link to="/genres" className="text-gray-700 hover:text-sahitya-500 font-medium">
+              {t("श्रेणियाँ", "Genres")}
+            </Link>
             <div className="relative">
               <input 
                 type="text" 
-                placeholder="खोजें..." 
+                placeholder={t("खोजें...", "Search...")} 
                 className="py-1 px-3 pr-8 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-sahitya-500 focus:border-sahitya-500"
               />
               <Search className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
@@ -61,18 +74,18 @@ const Navbar: React.FC = () => {
                 <DropdownMenuContent align="end">
                   <DropdownMenuItem className="cursor-pointer">
                     <User className="mr-2 h-4 w-4" />
-                    <span>प्रोफाइल</span>
+                    <span>{t("प्रोफाइल", "Profile")}</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="cursor-pointer" onClick={handleSignOut}>
                     <LogOut className="mr-2 h-4 w-4" />
-                    <span>लॉगआउट</span>
+                    <span>{t("लॉगआउट", "Logout")}</span>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
               <Button onClick={() => navigate('/auth')} variant="ghost" className="flex items-center gap-2">
                 <LogIn className="h-4 w-4" />
-                <span>लॉगिन</span>
+                <span>{t("लॉगिन", "Login")}</span>
               </Button>
             )}
           </div>
@@ -89,14 +102,23 @@ const Navbar: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
-              <Link to="/" className="text-gray-700 hover:text-sahitya-500 font-medium py-2">मुख्य पृष्ठ</Link>
-              <Link to="/books" className="text-gray-700 hover:text-sahitya-500 font-medium py-2">पुस्तकें</Link>
-              <Link to="/authors" className="text-gray-700 hover:text-sahitya-500 font-medium py-2">लेखक</Link>
-              <Link to="/genres" className="text-gray-700 hover:text-sahitya-500 font-medium py-2">श्रेणियाँ</Link>
+              <ShlokaNavbar />
+              <Link to="/" className="text-gray-700 hover:text-sahitya-500 font-medium py-2">
+                {t("मुख्य पृष्ठ", "Home")}
+              </Link>
+              <Link to="/books" className="text-gray-700 hover:text-sahitya-500 font-medium py-2">
+                {t("पुस्तकें", "Books")}
+              </Link>
+              <Link to="/authors" className="text-gray-700 hover:text-sahitya-500 font-medium py-2">
+                {t("लेखक", "Authors")}
+              </Link>
+              <Link to="/genres" className="text-gray-700 hover:text-sahitya-500 font-medium py-2">
+                {t("श्रेणियाँ", "Genres")}
+              </Link>
               <div className="relative">
                 <input 
                   type="text" 
-                  placeholder="खोजें..." 
+                  placeholder={t("खोजें...", "Search...")} 
                   className="w-full py-2 px-3 pr-8 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-sahitya-500 focus:border-sahitya-500"
                 />
                 <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
@@ -115,13 +137,13 @@ const Navbar: React.FC = () => {
                   </div>
                   <Button variant="ghost" className="justify-start p-0 hover:bg-transparent" onClick={handleSignOut}>
                     <LogOut className="mr-2 h-4 w-4" />
-                    <span>लॉगआउट</span>
+                    <span>{t("लॉगआउट", "Logout")}</span>
                   </Button>
                 </div>
               ) : (
                 <Button onClick={() => navigate('/auth')} variant="ghost" className="justify-start p-0 hover:bg-transparent">
                   <LogIn className="mr-2 h-4 w-4" />
-                  <span>लॉगिन</span>
+                  <span>{t("लॉगिन", "Login")}</span>
                 </Button>
               )}
             </div>
