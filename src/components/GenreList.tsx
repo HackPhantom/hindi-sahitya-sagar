@@ -2,7 +2,7 @@
 import React from 'react';
 import { genres } from '@/data/books';
 import { Link } from 'react-router-dom';
-import { Book, Feather, Theatre, MusicNote, BookOpen } from 'lucide-react';
+import { Book, Feather, Theater, Music, BookOpen } from 'lucide-react';
 
 const GenreList: React.FC = () => {
   // Map of genre ids to icons
@@ -10,8 +10,8 @@ const GenreList: React.FC = () => {
     '1': <Book className="h-6 w-6" />, // उपन्यास
     '2': <Feather className="h-6 w-6" />, // कविता
     '3': <BookOpen className="h-6 w-6" />, // कहानी
-    '4': <Theatre className="h-6 w-6" />, // नाटक
-    '5': <MusicNote className="h-6 w-6" />, // आत्मकथा
+    '4': <Theater className="h-6 w-6" />, // नाटक
+    '5': <Music className="h-6 w-6" />, // आत्मकथा
   };
 
   return (
