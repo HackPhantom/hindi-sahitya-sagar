@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
               </Button>
             </Link>
             <Link to="/authors">
-              <Button size="lg" variant="outline" className="border-sahitya-300 text-white hover:bg-sahitya-700">
+              <Button size="lg" variant="outline" className="border-sahitya-300  hover:bg-sahitya-700 text-black ">
                 लेखक परिचय
               </Button>
             </Link>

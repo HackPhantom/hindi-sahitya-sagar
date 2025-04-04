@@ -102,7 +102,7 @@ export const books: Book[] = [
     id: '1',
     title: 'गोदान',
     author: authors[0], // प्रेमचंद
-    coverImage: 'https://m.media-amazon.com/images/I/71ZN5T5TAIL._AC_UF1000,1000_QL80_.jpg',
+    coverImage: 'https://m.media-amazon.com/images/I/81HrQjtUBDL._SL1500_.jpg',
     genres: [genres[0]], // उपन्यास
     publishedYear: 1936,
     description: 'गोदान प्रेमचंद द्वारा लिखा गया एक प्रसिद्ध हिंदी उपन्यास है, जिसमें भारतीय किसानों के जीवन का यथार्थवादी चित्रण किया गया है। इसकी कहानी होरी और धनिया नामक एक गरीब किसान दंपति के इर्द-गिर्द घूमती है।',
@@ -116,7 +116,7 @@ export const books: Book[] = [
     id: '2',
     title: 'नीरजा',
     author: authors[1], // महादेवी वर्मा
-    coverImage: 'https://m.media-amazon.com/images/I/41C0FKAXQWL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg',
+    coverImage: 'https://5.imimg.com/data5/ANDROID/Default/2021/9/AS/NL/RC/9767667/prod-20210930-2328434223265517217412871-jpg-1000x1000.jpg',
     genres: [genres[1], genres[2]], // कविता, कहानी
     publishedYear: 1934,
     description: '"नीरजा" महादेवी वर्मा द्वारा रचित एक काव्य संग्रह है। यह उनके प्रमुख रचनाओं में से एक है, जिसमें प्रकृति और आत्मा के गहरे संबंधों का सुंदर चित्रण किया गया है।',
@@ -129,7 +129,7 @@ export const books: Book[] = [
     id: '3',
     title: 'आषाढ़ का एक दिन',
     author: authors[2], // मोहन राकेश
-    coverImage: 'https://m.media-amazon.com/images/I/51eREiY5aYL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg',
+    coverImage: 'https://m.media-amazon.com/images/I/A1mVEPF3YFL._SL1500_.jpg',
     genres: [genres[3]], // नाटक
     publishedYear: 1958,
     description: 'मोहन राकेश द्वारा लिखित यह नाटक महाकवि कालिदास के जीवन पर आधारित है। इसमें कवि के ग्रामीण जीवन से राजदरबार तक के सफर को दिखाया गया है।',
@@ -143,7 +143,7 @@ export const books: Book[] = [
     id: '4',
     title: 'तमस',
     author: authors[3], // भीष्म साहनी
-    coverImage: 'https://m.media-amazon.com/images/I/51-Oiwm+TaL._SY344_BO1,204,203,200_.jpg',
+    coverImage: 'https://m.media-amazon.com/images/I/81faMT-cnzL._SL1500_.jpg',
     genres: [genres[0]], // उपन्यास
     publishedYear: 1973,
     description: 'भीष्म साहनी का यह उपन्यास भारत-पाकिस्तान विभाजन के समय की सांप्रदायिक हिंसा पर केंद्रित है। इसमें विभाजन की त्रासदी और मानवीय संवेदनाओं का मार्मिक चित्रण किया गया है।',
@@ -155,7 +155,7 @@ export const books: Book[] = [
     id: '5',
     title: 'मधुशाला',
     author: authors[4], // हरिवंश राय बच्चन
-    coverImage: 'https://m.media-amazon.com/images/I/71-V+FBUM7L._AC_UF1000,1000_QL80_.jpg',
+    coverImage: 'https://m.media-amazon.com/images/I/71VVm4pMYvL._SL1360_.jpg',
     genres: [genres[1]], // कविता
     publishedYear: 1935,
     description: '"मधुशाला" हरिवंश राय बच्चन द्वारा रचित एक प्रसिद्ध काव्य संग्रह है। इसमें जीवन और मृत्यु पर गहन चिंतन प्रस्तुत किया गया है, मधु (शराब) को प्रतीक के रूप में प्रयोग करते हुए।',
@@ -168,7 +168,7 @@ export const books: Book[] = [
     id: '6',
     title: 'कफन',
     author: authors[0], // प्रेमचंद
-    coverImage: 'https://m.media-amazon.com/images/I/616gU3CHPIL._AC_UF1000,1000_QL80_.jpg',
+    coverImage: 'https://m.media-amazon.com/images/I/81MDiCjzUxL._SL1500_.jpg',
     genres: [genres[2]], // कहानी
     publishedYear: 1936,
     description: 'प्रेमचंद की यह प्रसिद्ध कहानी गरीबी और मानवीय संवेदनाओं का दर्दनाक चित्रण करती है। इसमें एक गरीब पिता और पुत्र की कहानी है, जिनकी पत्नी/माता की मृत्यु हो जाती है।',
@@ -180,7 +180,7 @@ export const books: Book[] = [
     id: '7',
     title: 'आधे अधूरे',
     author: authors[2], // मोहन राकेश
-    coverImage: 'https://m.media-amazon.com/images/I/91T+oLZ8vVL._AC_UF1000,1000_QL80_.jpg',
+    coverImage: 'https://m.media-amazon.com/images/I/A1vC6xa1AcL._SL1500_.jpg',
     genres: [genres[3]], // नाटक
     publishedYear: 1969,
     description: 'इस नाटक में मोहन राकेश ने एक मध्यमवर्गीय परिवार के टूटते रिश्तों और आधुनिक जीवन की विसंगतियों को प्रस्तुत किया है।',
@@ -192,7 +192,7 @@ export const books: Book[] = [
     id: '8',
     title: 'यामा',
     author: authors[1], // महादेवी वर्मा
-    coverImage: 'https://m.media-amazon.com/images/I/51W20h6xK-L._SY342_.jpg',
+    coverImage: 'https://m.media-amazon.com/images/I/51VRcCP9KYL.jpg',
     genres: [genres[1]], // कविता
     publishedYear: 1936,
     description: '"यामा" महादेवी वर्मा का एक प्रसिद्ध काव्य संग्रह है। इसमें उनकी विरह और वेदना से भरी कविताएँ संकलित हैं, जिनमें अद्वैतवादी दर्शन की झलक मिलती है।',
