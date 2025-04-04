@@ -13,6 +13,8 @@ import AuthorDetail from "./pages/AuthorDetail";
 import Genres from "./pages/Genres";
 import GenreDetail from "./pages/GenreDetail";
 import NotFound from "./pages/NotFound";
+import Auth from "./pages/Auth";
+import { AuthProvider } from "./contexts/AuthContext";
 
 const queryClient = new QueryClient();
 
@@ -22,17 +24,20 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/books" element={<Books />} />
-          <Route path="/book/:id" element={<BookDetail />} />
-          <Route path="/read/:id" element={<ReadBook />} />
-          <Route path="/authors" element={<Authors />} />
-          <Route path="/author/:id" element={<AuthorDetail />} />
-          <Route path="/genres" element={<Genres />} />
-          <Route path="/genre/:id" element={<GenreDetail />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AuthProvider>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/books" element={<Books />} />
+            <Route path="/book/:id" element={<BookDetail />} />
+            <Route path="/read/:id" element={<ReadBook />} />
+            <Route path="/authors" element={<Authors />} />
+            <Route path="/author/:id" element={<AuthorDetail />} />
+            <Route path="/genres" element={<Genres />} />
+            <Route path="/genre/:id" element={<GenreDetail />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
